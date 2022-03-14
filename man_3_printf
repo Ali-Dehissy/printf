@@ -1,0 +1,39 @@
+					Programmers manual of the function printf()
+
+
+Description
+
+The printf() function places output on the standard output stream stdout.
+
+
+Conversion Specifications
+
+Each conversion specification is introduced by the % character or by the character sequence %n$, after which the following appear in sequence:
+An optional field, consisting of a decimal digit string followed by a $, specifying the next argument to be converted. If this field is not provided, the args following the last argument converted will be used.
+
+
+Flag Characters
+The flag characters and their meanings are:
+
+The integer portion of the result of a decimal conversion (%i, %d, %u, %f, %F, %g, or %G) will be formatted with thousands' grouping characters. 
+For other conversions the behavior is undefined. The non-monetary grouping character is used.
+
+
+Example
+
+/* Example using printf */
+
+#include <stdio.h>
+
+int main(int argc, const char * argv[])
+{
+    /* Define variables */
+    int age = 10;
+    float load = 1.4;
+
+    /* Display the results using the appropriate format strings for each variable */
+    printf("TechOnTheNet.com is over %d years old and pages load in %.1f seconds.\n", age, load);
+
+    return 0;
+}
+
