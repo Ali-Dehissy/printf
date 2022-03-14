@@ -9,8 +9,8 @@ The syntax of printf() function:
 printf("format string",argument_list);
 
 Format specifiers:
-¤ %c : a single character
-¤ %s : a string
-¤ %d : a decimal integer (assumes base 10)	
-¤ %i : a decimal integer (detects the base automatically)
+%c : a single character
+%s : a string
+%d : a decimal integer (assumes base 10)	
+%i : a decimal integer (detects the base automatically)
 
