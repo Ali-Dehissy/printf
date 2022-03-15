@@ -8,6 +8,7 @@
  */
 int print_i(va_list num)
 {
+	int q = 1;
 	int j = 0;
 	unsigned int k;
 	int x = va_arg(num, int);
@@ -17,24 +18,24 @@ int print_i(va_list num)
 		_putchar('-');
 		j++;
 		k =  -x;
-		divnum(k);
+	
 	}
 	else
 	{
 		k = x;
-		j+=divnum(k);
-	
 	}
-	return (j);
-}
-/**
- *divnum - to use putchar
- *@num: int to print
- */
-void divnum(unsigned int num)
-{
-		if (num / 10)
-			divnum(num / 10);
+	while (k / q > 9)
+	{
+	q *= 10;
+	}
+	while (q != 0)
+	{
+	_putchar(k / q + '0');
+	k %= q;
+	q /= 10;
+	j++;
+	}
 
-		_putchar('0' + num % 10);
+return (j);
 }
+
