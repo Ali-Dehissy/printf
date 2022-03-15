@@ -22,7 +22,7 @@ int print_i(va_list num)
 		k = x;
 		divnum(k);
 	}
-	return (1);
+	return (k);
 }
 /**
  *divnum - to use putchar
