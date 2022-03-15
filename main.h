@@ -20,7 +20,6 @@ int (*func)(va_list);
 int _printf(const char *format, ...);
 int(*get_convert(const char *format, int i))(va_list list);
 int print_i(va_list num);
-void divnum(unsigned int num);
 int print_c(va_list c);
 int print_s(va_list s);
 int _putchar(char c);

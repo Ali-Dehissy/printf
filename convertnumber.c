@@ -8,21 +8,24 @@
  */
 int print_i(va_list num)
 {
+	int j = 0;
 	unsigned int k;
 	int x = va_arg(num, int);
 
 	if (x < 0)
 	{
 		_putchar('-');
+		j++;
 		k =  -x;
 		divnum(k);
 	}
 	else
 	{
 		k = x;
-		divnum(k);
+		j+=divnum(k);
+	
 	}
-	return (k);
+	return (j);
 }
 /**
  *divnum - to use putchar
